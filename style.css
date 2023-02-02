@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("bgr.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .wrapper{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .traitym{
+            width: 600px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            margin-top: 20%;
+            margin-left: -22px;
+        }
+        svg .cls-1{
+            stroke: #fe0040;
+            stroke-width: 5px;
+            fill: none;
+            stroke-dasharray: 3700;
+            stroke-dashoffset: 3700;
+            animation: ani 6s forwards 1s;
+        }
+        @keyframes ani{
+            to{
+                stroke-dashoffset: 0;
+            }
+        }
+        svg .cls-3{
+            stroke: #fe0040;
+            stroke-width: 5px;
+            fill: none;
+            border-radius: 2px;
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: ani1 6s forwards 3s;
+        }
+        @keyframes ani1{
+            0%{
+                stroke-dashoffset: 2000;
+                fill: none;
+            }
+            100%{
+                stroke-dashoffset: 0;
+                fill: red;
+            }
+        }
+        #text{
+            position: absolute;
+            top: 20%;
+            font-size: 23px;
+            font-family: cursive;
+            color: #fc406f;
+            cursor: pointer;
+            opacity: 0;
+            animation: anime 1s forwards;
+            animation-delay: 5.7s;
+        }
+        @keyframes anime{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        #text:hover{
+            color: red;
+            filter: drop-shadow(0 0 10px red);
+        }
+        .items{
+            position: absolute;
+            top: 20%;
+            width: 100px;
+            height: 35px;
+            background: #ed1c24;
+            opacity: 0;
+            animation: haha 2s forwards 4s;
+        }
+        @keyframes haha{
+            0%{
+                opacity: 0;
+                width: 0px;
+            }
+            50%{
+                opacity: 1;
+            }
+            90%{
+                opacity: 1;
+                width: 130px;
+            }
+            100%{
+                opacity: 0;
+                width: 130px;
+            }
+        }
+        .img{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 1000;
+            transform: scale(0);
+            top: 28%;
+            box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.4);
+            animation: imageAvt 2s 6s forwards alternate;
+        }
+        @keyframes imageAvt{
+            0%{
+                transform:scale(0);
+            }
+            10%{
+                transform: scale(1.3);
+            }
+            20%{
+                transform: scale(0.7);
+            }
+            30%,100%{
+                transform: scale(1);
+            }
+        }
+        .img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content-wrapper{
+            border: 2px solid red;
+            opacity: 0;
+            cursor: pointer;
+            animation: number 2s forwards 2s;
+        }
+        @keyframes number{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 4vh;
+            color: red;
+            font-size: 20px;
+            padding: 0px 20px;
+            font-family: cursive;
+        }
+        .text1{
+            padding-right: 5px;
+        }
+        .container{
+            display: none;
+        }
+        .toast{
+            background: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 2s;
+            z-index: 1000000;
+            animation: toast-button 2s ease-in-out forwards;
+        }
+        @keyframes toast-button{
+            0%{
+                transform: translateY(-100%);
+            }
+            80%{
+                transform: translateY(0%);
+            }
+            90%,91%,92%,93%,94%,95%{
+                transform: translateY(-3%);
+            }
+            100%{
+                transform: translateY(0%);
+            }
+        }
+        .toast-wrapper{
+            margin-top: -200px;
+            position: absolute;
+            justify-content: center;
+            text-align: center;
+        }
+        .toast-wrapper img{
+            width: 70%;
+        }
+        p{
+            padding: 0;
+            margin-top: -10%;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Ms Madi', chữ thảo;
+            animation: text-crush 2s forwards 1s;
+            cursor: pointer;
+        }
+        @keyframes text-crush{
+            0%{
+                color: black;
+            }
+            100%{
+                color: red;
+                filter: drop-shadow(0 0 15px red);
+            }
+        }
+        .icon{
+            font-size: 40px;
+            color: red;
+            opacity: 0;
+            margin-top: 5%;
+            transition: 1s;
+            cursor: pointer;
+            animation: mail 1s forwards 3s infinite;
+        }
+        @keyframes mail{
+            0%{
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+            20%,60%{
+                opacity: 1;
+                transform: rotate(5deg);
+            }
+            40%,80%{
+                opacity: 1;
+                transform: rotate(-5deg);
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            body{
+                background-size: cover;
+            }
+            .wrapper{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            .img{
+                width: 120px;
+                height: 120px;
+            }
+            .traitym{
+                width: 450px;
+                margin-top: 40%;
+            }
+            .items{
+                top: 22%;
+            }
+            #text{
+                top: 22%;
+            }
+        }
